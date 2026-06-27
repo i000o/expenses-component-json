@@ -2,9 +2,17 @@
 @import "tailwindcss"; 
 
 .bar {
-  @apply w-7 bg-[#ec775f] rounded-t;
+  @apply w-7 bg-[#ec775f] rounded-t hover:cursor-pointer hover:opacity-50 relative;
 }
 
 .bar-today {
-  @apply bg-[#87bec4]; /* overrides the background-color from .bar */
+  @apply bg-[#87bec4];
+}
+
+.bar-tooltip { 
+    @apply bg-[#382314] text-white font-bold p-2 m-3 rounded hidden text-[0.8em] absolute top-30;
+}
+
+.bar:hover .bar-tooltip { 
+    @apply block; 
 }

@@ -24,12 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const amount = day.amount; 
             const amountBar = document.createElement('div'); 
             amountBar.classList.add('bar'); 
+            amountBar.style.height = `${(amount / maxAmount) * 100}%`; 
 
+            const tooltip = document.createElement('span'); 
+            tooltip.classList.add('bar-tooltip'); 
+            tooltip.textContent = `$${amount.toFixed(2)}`; 
+            amountBar.appendChild(tooltip); 
+            
             if (day.day === today) { 
                 amountBar.classList.add('bar-today'); 
             }
 
-            amountBar.style.height = `${(amount / maxAmount) * 100}%`; 
             chartContainer.appendChild(amountBar); 
         })
     }

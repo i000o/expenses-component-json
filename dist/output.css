@@ -8,6 +8,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --font-weight-extralight: 200;
     --font-weight-light: 300;
@@ -167,6 +168,9 @@
   }
 }
 @layer utilities {
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
@@ -251,8 +255,8 @@
   .bg-\[\#f9ece1\] {
     background-color: #f9ece1;
   }
-  .bg-\[\#ffffff\] {
-    background-color: #ffffff;
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -312,18 +316,52 @@
   .text-\[\#f9ece1\] {
     color: #f9ece1;
   }
-  .text-\[\#ffffff\] {
-    color: #ffffff;
+  .text-white {
+    color: var(--color-white);
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
   }
 }
 .bar {
+  position: relative;
   width: calc(var(--spacing) * 7);
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   background-color: #ec775f;
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      opacity: 50%;
+    }
+  }
 }
 .bar-today {
   background-color: #87bec4;
+}
+.bar-tooltip {
+  position: absolute;
+  top: calc(var(--spacing) * 30);
+  margin: calc(var(--spacing) * 3);
+  display: none;
+  border-radius: 0.25rem;
+  background-color: #382314;
+  padding: calc(var(--spacing) * 2);
+  font-size: 0.8em;
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-white);
+}
+.bar:hover .bar-tooltip {
+  display: block;
 }
 @property --tw-font-weight {
   syntax: "*";
