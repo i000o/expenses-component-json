@@ -8,40 +8,46 @@
   <link rel="stylesheet" href="dist/output.css"> 
   <title>Frontend Mentor | Expenses chart component</title>
 </head>
-<body bg-color="hsl(25, 47%, 15%)">
-  <div>   
-  <h1> 
-    My balance
-  </h1>
-  <h2> 
-    $921.48
-  </h2>
-  <img src="images/logo.svg"> 
+<body class="bg-[#f9ece1]">
+  <div class="min-w-[60vw] flex flex-col text-left gap-[1em] m-10"> <!-- wrapper -->
+     <div class="flex flex-row justify-between bg-[#ec775f] rounded-xl p-5 text-[#ffffff]"> <!-- top section showing MY BALANCE-->
+    <div> 
+      <h1 class="font-extralight text-[0.8em]"> 
+        My balance
+      </h1>
+      <p class="font-bold text-[1.2em]"> 
+        $921.48
+      </p>
+    </div>  
+    <img src="images/logo.svg"> 
   </div>
-  <div>
-    <h3> 
-      Spending - Last 7 days
-    </h3>
-    <p>mon</p>
-    <p>tue</p>
-    <p>wed</p>
-    <p>thu</p>
-    <p>fri</p>
-    <p>sat</p>
-    <p>sun</p>
-    <br>
-    <h4> 
-    Total this month
-    </h4>
-    <h5> 
-    $478.33
-    </h5>
-    <h6> 
-      +2.4%
-    </h6>
-    <p> 
-    from last month
-    </p>
+    <div class="bg-[#ffffff] rounded-[12px] p-5 h-auto">
+      <p class="font-extrabold"> 
+        Spending - Last 7 days
+      </p>
+      <div class="flex flex-row justify-start items-center text-center gap-[1em]"> 
+        <p>mon</p>
+        <p>tue</p>
+        <p>wed</p>
+        <p>thu</p>
+        <p>fri</p>
+        <p>sat</p>
+        <p>sun</p>
+      </div>
+      <hr class="text-[#f9ece1]">
+      <p class="text-[#93867b]"> 
+      Total this month
+      </p>
+      <p> 
+      $478.33
+      </p>
+      <p> 
+        +2.4%
+      </p>
+      <p> 
+      from last month
+      </p>
+    </div>
   </div>
   <!-- <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
