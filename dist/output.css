@@ -10,8 +10,9 @@
       "Courier New", monospace;
     --spacing: 0.25rem;
     --font-weight-extralight: 200;
+    --font-weight-light: 300;
     --font-weight-bold: 700;
-    --font-weight-extrabold: 800;
+    --tracking-wide: 0.025em;
     --radius-xl: 0.75rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -166,14 +167,44 @@
   }
 }
 @layer utilities {
-  .m-10 {
-    margin: calc(var(--spacing) * 10);
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .mr-5 {
+    margin-right: calc(var(--spacing) * 5);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-\[-3px\] {
+    margin-bottom: -3px;
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
   }
   .flex {
     display: flex;
   }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
+  .h-\[100\%\] {
+    height: 100%;
+  }
   .h-auto {
     height: auto;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
@@ -193,14 +224,17 @@
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
-  .justify-start {
-    justify-content: flex-start;
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .gap-\[1em\] {
     gap: 1em;
@@ -223,41 +257,57 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .p-10 {
-    padding: calc(var(--spacing) * 10);
-  }
-  .p-20 {
-    padding: calc(var(--spacing) * 20);
-  }
   .text-center {
     text-align: center;
   }
   .text-left {
     text-align: left;
   }
+  .text-right {
+    text-align: right;
+  }
+  .text-\[0\.7em\] {
+    font-size: 0.7em;
+  }
   .text-\[0\.8em\] {
     font-size: 0.8em;
+  }
+  .text-\[0\.9em\] {
+    font-size: 0.9em;
+  }
+  .text-\[0\.88em\] {
+    font-size: 0.88em;
   }
   .text-\[1\.2em\] {
     font-size: 1.2em;
   }
-  .text-\[1em\] {
-    font-size: 1em;
+  .text-\[1\.4em\] {
+    font-size: 1.4em;
+  }
+  .text-\[1\.8em\] {
+    font-size: 1.8em;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .font-extrabold {
-    --tw-font-weight: var(--font-weight-extrabold);
-    font-weight: var(--font-weight-extrabold);
-  }
   .font-extralight {
     --tw-font-weight: var(--font-weight-extralight);
     font-weight: var(--font-weight-extralight);
   }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
   .text-\[\#93867b\] {
     color: #93867b;
+  }
+  .text-\[\#382314\] {
+    color: #382314;
   }
   .text-\[\#f9ece1\] {
     color: #f9ece1;
@@ -266,7 +316,20 @@
     color: #ffffff;
   }
 }
+.bar {
+  width: calc(var(--spacing) * 7);
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-color: #ec775f;
+}
+.bar-today {
+  background-color: #87bec4;
+}
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -274,6 +337,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-font-weight: initial;
+      --tw-tracking: initial;
     }
   }
 }
