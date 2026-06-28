@@ -10,6 +10,7 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-md: 28rem;
     --font-weight-extralight: 200;
     --font-weight-light: 300;
     --font-weight-bold: 700;
@@ -207,17 +208,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-7 {
-    width: calc(var(--spacing) * 7);
-  }
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
   .w-full {
     width: 100%;
   }
-  .min-w-\[60vw\] {
-    min-width: 60vw;
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .flex-1 {
+    flex: 1;
   }
   .flex-col {
     flex-direction: column;
@@ -330,6 +331,7 @@
 .bar {
   position: relative;
   width: calc(var(--spacing) * 7);
+  flex: 1;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
   background-color: #ec775f;
