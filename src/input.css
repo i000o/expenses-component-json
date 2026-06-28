@@ -2,7 +2,7 @@
 @import "tailwindcss"; 
 
 .bar {
-  @apply w-7 bg-[#ec775f] rounded-t hover:cursor-pointer hover:bg-[#ffb8a9] relative flex-1;
+  @apply bg-[#ec775f] rounded-t hover:cursor-pointer hover:bg-[#ffb8a9] relative flex-1;
 }
 
 .bar-today {
@@ -10,7 +10,7 @@
 }
 
 .bar-tooltip { 
-    @apply bg-[#382314] text-white font-bold p-2 m-3 rounded hidden text-[0.8em] absolute right-[-30px] top-[-60px];
+    @apply bg-[#382314] text-white font-bold p-2 m-3 rounded hidden text-[0.8em] absolute left-1/4 -translate-x-1/2 bottom-full mb-2;
 }
 
 .bar:hover .bar-tooltip { 
