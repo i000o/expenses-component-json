@@ -10,7 +10,7 @@
 }
 
 .bar-tooltip { 
-    @apply bg-[#382314] text-white font-bold p-2 m-3 rounded hidden text-[0.8em] absolute top-30;
+    @apply bg-[#382314] text-white font-bold p-2 m-3 rounded hidden text-[0.8em] absolute right-[-30px] top-[-60px];
 }
 
 .bar:hover .bar-tooltip { 

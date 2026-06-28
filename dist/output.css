@@ -349,7 +349,8 @@
 }
 .bar-tooltip {
   position: absolute;
-  top: calc(var(--spacing) * 30);
+  top: -60px;
+  right: -30px;
   margin: calc(var(--spacing) * 3);
   display: none;
   border-radius: 0.25rem;
