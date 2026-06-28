@@ -340,12 +340,17 @@
   }
   &:hover {
     @media (hover: hover) {
-      opacity: 50%;
+      background-color: #ffb8a9;
     }
   }
 }
 .bar-today {
   background-color: #87bec4;
+  &:hover {
+    @media (hover: hover) {
+      background-color: #afe3eb;
+    }
+  }
 }
 .bar-tooltip {
   position: absolute;
