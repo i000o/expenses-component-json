@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const response = await fetch('./data.json'); 
         const expenses = await response.json(); 
 
-        populateChart(expenses); I
+        populateChart(expenses); 
     }
 
     populate(); 
